@@ -9,6 +9,7 @@ You should note that not all linux distros work with ROS. Some which do are -
 1. Ubuntu
 2. Debian
 3. PopOS
+
 (I am sure many more do too, but these are the distros I have worked with and can confirm that these work)
 
 If you have not done the necessary procedures, I would suggest these videos for you -
