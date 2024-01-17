@@ -1,4 +1,4 @@
-A repository full of gazebo examples. For anyone who wishes to start their gazebo journey.
+# A repository full of gazebo examples. For anyone who wishes to start their gazebo journey.
 
 ## This code is only for ROS Noetic for now
 
@@ -38,8 +38,8 @@ Go to the bottom of the page and at the end, copy paste this -
 ```
 source ~/catkin_ws/devel/setup.bash
 ```
-
 Save your edit and close the terminal
+
 4. Now, come to this page, go to the "<>Code" section, and click on "Download ZIP"(You can git clone it too) and put this file in your catkin_ws/src
 
 5. Open your terminal once again and copy paste this -
