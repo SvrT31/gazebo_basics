@@ -56,6 +56,9 @@ roslaunch diff_bot gazebo.launch
 This robot can be moved using teleop twist keyboard and already has laser sensor plugin initialized into it. 
 Also, for those who like challenges, this robot does not simulate exactly on the origin of the world. Your challenge is to make it simulate at the center. Good luck!
 
+Instructions on how to install and run teleop_twist_keyboard will be updated soon, along with how to check laser sensor readings.
+Also, I will be adding a few word files and xacro functionality for a broader experience. Although I recommend that if you are new, you should first understand what all I have done first before delving into world files and xacro
+
 contact me at - tembesuvrat@gmail.com
 
 
