@@ -3,7 +3,7 @@
 ## This code is only for ROS Noetic for now
 
 Now that you are here, we are assuming that you already know about ROS and have a linux system working on your computer either as the sole system or in a dual boot more
-(VMs, ie, Virtual Machines) do not function properly with ROS)
+(VMs, ie, Virtual Machines do not function properly with ROS)
 
 You should note that not all linux distros work with ROS. Some which do are - 
 1. Ubuntu
