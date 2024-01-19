@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0117515180043045 -0.144118267539873 -0.251612186144683"
+        rpy="0 0 0" />
+      <mass
+        value="2.07208801297753" />
+      <inertia
+        ixx="0.0389997603970739"
+        ixy="9.74635758301643E-13"
+        ixz="1.54717550227989E-09"
+        iyy="0.0782478716922286"
+        iyz="2.21753688485422E-18"
+        izz="0.0392536368687794" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="motor1">
+    <inertial>
+      <origin
+        xyz="-6.16601160668834E-05 0.000559678759448873 0.0039566217959465"
+        rpy="0 0 0" />
+      <mass
+        value="0.195017652727859" />
+      <inertia
+        ixx="0.000131293982397604"
+        ixy="8.98095992122E-08"
+        ixz="-1.30751582986308E-07"
+        iyy="0.00012725964090301"
+        iyz="-1.48261794978278E-07"
+        izz="0.000181454484783519" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Motor1"
+    type="revolute">
+    <origin
+      xyz="-0.14562 0.14172 -0.187"
+      rpy="-1.5708 0 -2.618" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor1" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="motor2">
+    <inertial>
+      <origin
+        xyz="-6.1659065698827E-05 0.000559679519403972 0.00395662413477416"
+        rpy="0 0 0" />
+      <mass
+        value="0.195017665259095" />
+      <inertia
+        ixx="0.00013129400010565"
+        ixy="8.98065808386477E-08"
+        ixz="-1.30751132296546E-07"
+        iyy="0.000127259663258354"
+        iyz="-1.48263269087548E-07"
+        izz="0.000181454493659365" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor2"
+    type="revolute">
+    <origin
+      xyz="0.16913 0.37081 -0.187"
+      rpy="-1.5708 0 0.5236" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor2" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="motor3">
+    <inertial>
+      <origin
+        xyz="-6.16544531964608E-05 0.000559681445230636 0.00395664648408955"
+        rpy="0 0 0" />
+      <mass
+        value="0.195017893026959" />
+      <inertia
+        ixx="0.000131293584256081"
+        ixy="8.96150990648597E-08"
+        ixz="-1.30682450982611E-07"
+        iyy="0.000127260142425843"
+        iyz="-1.48272186281656E-07"
+        izz="0.000181454563520848" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor3"
+    type="revolute">
+    <origin
+      xyz="0.16913 0.14172 -0.187"
+      rpy="-1.5708 0 2.618" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor3" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="motor4">
+    <inertial>
+      <origin
+        xyz="-6.16524961182807E-05 0.000559682254467314 0.00395665095209652"
+        rpy="0 0 0" />
+      <mass
+        value="0.195017922901131" />
+      <inertia
+        ixx="0.00013129359698084"
+        ixy="8.96125441840488E-08"
+        ixz="-1.30688559929062E-07"
+        iyy="0.000127260155695964"
+        iyz="-1.4827519910607E-07"
+        izz="0.000181454571364027" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor4"
+    type="revolute">
+    <origin
+      xyz="-0.14562 0.37081 -0.187"
+      rpy="-1.5708 0 -0.5236" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor4" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="motor5">
+    <inertial>
+      <origin
+        xyz="-4.71882199655216E-05 0.000559729652319124 0.00395651183667726"
+        rpy="0 0 0" />
+      <mass
+        value="0.195015921159594" />
+      <inertia
+        ixx="0.000131294198758454"
+        ixy="6.79420476687242E-08"
+        ixz="-1.20083777410233E-07"
+        iyy="0.000127260162660842"
+        iyz="-1.48309401969991E-07"
+        izz="0.000181453659287454" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor5"
+    type="revolute">
+    <origin
+      xyz="-0.15123 0.14691 -0.020252"
+      rpy="3.1416 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor5" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="motor6">
+    <inertial>
+      <origin
+        xyz="-4.71882098529441E-05 0.000559729871319831 0.0039565118374069"
+        rpy="0 0 0" />
+      <mass
+        value="0.195015921154378" />
+      <inertia
+        ixx="0.000131294200431186"
+        ixy="6.79420604357517E-08"
+        ixz="-1.20085546301461E-07"
+        iyy="0.000127260164604487"
+        iyz="-1.48309359799253E-07"
+        izz="0.000181453659778292" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor6"
+    type="revolute">
+    <origin
+      xyz="0.17473 0.39262 -0.020252"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor6" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="motor7">
+    <inertial>
+      <origin
+        xyz="-4.7188214690741E-05 0.000559729759539357 0.00395651188738552"
+        rpy="0 0 0" />
+      <mass
+        value="0.195015921929532" />
+      <inertia
+        ixx="0.000131294201295374"
+        ixy="6.79420263954798E-08"
+        ixz="-1.20085500766226E-07"
+        iyy="0.00012726016449975"
+        iyz="-1.48309353504246E-07"
+        izz="0.000181453660714987" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor7"
+    type="revolute">
+    <origin
+      xyz="0.17473 0.14691 -0.020252"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor7" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="motor8">
+    <inertial>
+      <origin
+        xyz="-4.71881578382183E-05 0.000559729763432715 0.00395651179179287"
+        rpy="0 0 0" />
+      <mass
+        value="0.195015920467566" />
+      <inertia
+        ixx="0.000131294200797348"
+        ixy="6.79421028598608E-08"
+        ixz="-1.20082791376962E-07"
+        iyy="0.000127260165905323"
+        iyz="-1.48309425661792E-07"
+        izz="0.000181453659360721" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_description/meshes/motor8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor8"
+    type="revolute">
+    <origin
+      xyz="-0.15123 0.39262 -0.020252"
+      rpy="3.1416 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor8" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
