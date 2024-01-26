@@ -2,7 +2,7 @@
 
 ## This code is only for ROS Noetic for now
 
-Now that you are here, we are assuming that you already know about ROS and have a linux system working on your computer either as the sole system or in a dual boot (or in multiboot)
+Now that you are here, we are assuming that you already know about ROS and have a linux system (debain 20 LTS type) working on your computer either as the sole system or in a dual boot (or in multiboot)
 (VMs, ie, Virtual Machines do not function properly with ROS)
 
 You should note that not all linux distros work with ROS. Some which do are - 
