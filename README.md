@@ -13,7 +13,7 @@ You should note that not all linux distros work with ROS. Some which do are -
 (I am sure many more do too, but these are the distros I have worked with and can confirm that these work)
 
 If you have not done the necessary procedures, I would suggest these videos for you -
-1) [Dual Booting your PC](https://youtu.be/mXyN1aJYefc?si=kPJcjx9pfVaH84Fk)https://youtu.be/mXyN1aJYefc?si=kPJcjx9pfVaH84Fk) 
+1) [Dual Booting your PC](https://youtu.be/mXyN1aJYefc?si=kPJcjx9pfVaH84Fk) 
 2) [Installing ROS Noetic](https://youtu.be/Qk4vLFhvfbI?si=iN0WuiLxXdzcxpCE) - Please install full version of ROS. You can try removing what you don't want once you get the hang of the system
 
 
