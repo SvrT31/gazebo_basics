@@ -17,7 +17,7 @@ If you have not done the necessary procedures, I would suggest these videos for 
 2) [Installing ROS Noetic](https://youtu.be/Qk4vLFhvfbI?si=iN0WuiLxXdzcxpCE) - Please install full version of ROS. You can try removing what you don't want once you get the hang of the system
 
 
-(For those who are using M-series Macs, I have bad news for you. Its extremely difficult to get ROS running on it. I would say its impossible, but a person from my university got it running after 2 months of dedicated system configuration. Still, its something I would definitely not recommend)
+(For those who are using M-series Macs, I have bad news for you. Its extremely difficult to get ROS1 running on it. I would say its impossible, but a person from my university got it running after 2 months of dedicated system configuration. Still, its something I would definitely not recommend. ROS2 is avaialable though. And I will soon add the ROS2 file too)
 
 ## Now that you have dual booted your pc and installed ROS
 1. Press Ctrl+Alt+T on your keyboard (This will open your terminal)
