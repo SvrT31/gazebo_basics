@@ -34,4 +34,4 @@ Also, writing .urdf.xacro is not necessary. You can use only xacro. I didn't fee
 
 Hope this is of help. The rest of the code, ie, the code to add more sensor files, world files, etc will be in the ROS2 branch of this repository. We are doing this because the world is moving to ROS2, and this much ROS knowledge is more than enough. Now its time to shift to ROS2.
 
-See you in the ROS2 repository!
+See you in the ROS2 branch of this repository!
