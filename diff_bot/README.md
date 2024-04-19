@@ -1,9 +1,16 @@
-### Hello! So, you decided to open the folder and actually see whats going on? Good for you and thank you for showing interest!
+## Hello! So, you decided to open the folder and actually see whats going on? Good for you and thank you for showing interest!
 
 You will find a lot of files in here. What you will also see in this repository is a folder called "sensors" and "worlds".
 
 I have purposefully not added most of the sensors and kept the world empty in the gazebo.launch file. 
-If you want to launch a world (ie, add a world to the simulation), you have to run -
+If you want to launch a world (ie, add a world to the simulation), you have to do the following steps -
+
+1) Go into the "worlds" folder, and cut the "winding_valley_heightmap" folder.
+2) Toggle on hidden files in your file explorer.
+3) You will find a ".gazebo" folder. Inside that folder, there is another folder named "models".
+4) Paste thsi "winding_valley_heightmap" in that folder.
+
+Now, open a termincal and run this -
 ```
 roslaunch diff_bot all.launch
 ```
@@ -12,7 +19,7 @@ I know what you are thinking, "This launched the world file, what to do if I wan
 
 All sensors and plugins are a direct part of the urdf format. To launch these sensors, you either have to add them at the bottom of the urdf or you have to create what is known as a Xacro file.
 
-#### Xacro format
+### Xacro format
 
 Suppose yuou wish to keep your sensor files and your robot's urdf seperate, you will use this Xacro.
 To use this, you first need to install Xacro by running this command in your terminal -
