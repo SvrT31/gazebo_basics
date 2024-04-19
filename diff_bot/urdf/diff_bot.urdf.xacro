@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="diff_bot">
+
+  <xacro:include filename="laser_plugin.urdf.xacro"/> 
+
+  <xacro:include filename="diff_drive.urdf.xacro"/>
+
+  <!-- The Base Link -->
+  <link name="base_link">
+    <inertial>
+      <origin
+        xyz="0.093917 -5.5511E-17 -0.055692"
+        rpy="0 0 0" />
+      <mass
+        value="3.4689" />
+      <inertia
+        ixx="0.012207"
+        ixy="-3.1988E-18"
+        ixz="-0.00086716"
+        iyy="0.025768"
+        iyz="3.556E-20"
+        izz="0.034797" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_bot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_bot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <!-- The Castor Holder -->
+  <link
+    name="cst">
+    <inertial>
+      <origin
+        xyz="-2.0329E-06 0 0.0046193"
+        rpy="0 0 0" />
+      <mass
+        value="0.50472" />
+      <inertia
+        ixx="2.0927E-08"
+        ixy="5.5078E-24"
+        ixz="6.0363E-12"
+        iyy="2.3416E-08"
+        iyz="4.7559E-24"
+        izz="2.6073E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_bot/meshes/cst.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_bot/meshes/cst.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="cst_jnt"
+    type="fixed">
+    <origin
+      xyz="0.23793 0 -0.024623"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="cst" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <!-- The Castor Wheel -->
+  <link
+    name="cst_whl">
+    <inertial>
+      <origin
+        xyz="-8.621E-09 -2.899E-10 -4.7633E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.826585" />
+      <inertia
+        ixx="9.6258E-08"
+        ixy="-1.7013E-15"
+        ixz="7.8648E-14"
+        iyy="1.6326E-07"
+        iyz="2.5172E-15"
+        izz="9.6258E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_bot/meshes/cst_whl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_bot/meshes/cst_whl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  
+  <joint
+    name="cst_jnt_whl"
+    type="continuous">
+    <origin
+      xyz="0 0 0.013756"
+      rpy="0 0 0" />
+    <parent
+      link="cst" />
+    <child
+      link="cst_whl" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+  <!-- The Lidar -->
+  <!--doesn't have to be a lidar. I will be adding many files with various sensors very soon-->
+  
+
+</robot>

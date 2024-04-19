@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <!-- The Right Wheel -->
+    <link name="rt_whl">
+        <inertial>
+            <origin xyz="-3.4694E-18 0 0" rpy="0 0 0" />
+            <mass value="0.18864" />
+        <inertia
+            ixx="0.00012828"
+            ixy="-2.9912E-20"
+            ixz="-4.7453E-40"
+            iyy="0.00023743"
+            iyz="1.7768E-37"
+            izz="0.00012828" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://diff_bot/meshes/rt_whl.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.29804 0.29804 0.29804 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin
+            xyz="0 0 0"
+            rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://diff_bot/meshes/rt_whl.STL" />
+            </geometry>
+        </collision>
+    </link>
+  
+    <joint name="rt_whl_jnt" type="continuous">
+        <origin xyz="0 0.1225 -0.05" rpy="0 0 0" />
+            <parent link="base_link" />
+            <child link="rt_whl" />
+            <axis xyz="0 -1 0" />
+    </joint>
+  
+    <!-- The Left Wheel -->
+    <link name="lft_whl">
+        <inertial>
+            <origin xyz="5.8981E-17 2.7756E-17 0" rpy="0 0 0" />
+            <mass value="0.18864" />
+        <inertia
+            ixx="0.00012828"
+            ixy="-3.1324E-20"
+            ixz="-4.7453E-40"
+            iyy="0.00023743"
+            iyz="1.7768E-37"
+            izz="0.00012828" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://diff_bot/meshes/lft_whl.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.29804 0.29804 0.29804 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+            <mesh
+                filename="package://diff_bot/meshes/lft_whl.STL" />
+            </geometry>
+        </collision>
+    </link>
+  
+    <joint name="lft_whl_jnt" type="continuous">
+        <origin xyz="0 -0.1225 -0.05" rpy="0 0 0" />
+        <parent link="base_link" />
+        <child link="lft_whl" />
+        <axis xyz="0 -1 0" />
+    </joint>
+
+    <gazebo>
+        <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+            <updateRate>10</updateRate>
+            <leftJoint>lft_whl_jnt</leftJoint>
+            <rightJoint>rt_whl_jnt</rightJoint>
+            <wheelSeparation>0.2</wheelSeparation>
+            <wheelDiameter>0.1</wheelDiameter>
+            <wheelAcceleration>5.0</wheelAcceleration>
+            <wheelTorque>20</wheelTorque>
+            <commandTopic>cmd_vel</commandTopic>
+            <odometryTopic>odom</odometryTopic>
+            <odometryFrame>odom</odometryFrame>
+            <robotBaseFrame>base_link</robotBaseFrame>
+            <odometrySource>1</odometrySource>
+            <publishWheelTF>true</publishWheelTF>
+            <publishOdom>true</publishOdom>
+            <publishWheelJointState>true</publishWheelJointState>
+            <legacyMode>false</legacyMode>
+        </plugin>
+    </gazebo>
+
+</robot>
